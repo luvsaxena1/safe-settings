@@ -1540,7 +1540,7 @@ branches:
       additions: {
         branches: [
           {
-            name: "feature1",
+            name: 'feature1',
             protection: {
               required_pull_request_reviews: {
                 required_approving_review_count: 5,
@@ -1599,13 +1599,13 @@ branches:
 
     const ignorableFields = []
     const mockReturnGitHubContext = jest.fn().mockReturnValue({
-      request: () => {},
-    });
+      request: () => {}
+    })
     const mergeDeep = new MergeDeep(
       log,
       mockReturnGitHubContext,
       ignorableFields
-    );
+    )
     const merged = mergeDeep.compareDeep(target, source)
     console.log(`source ${JSON.stringify(source, null, 2)}`)
     console.log(`target ${JSON.stringify(target, null, 2)}`)
